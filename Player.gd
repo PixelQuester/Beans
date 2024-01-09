@@ -13,7 +13,7 @@ func _process(delta):
 	pass
 	
 func _physics_process(delta):
-	var ymove = Input.get_axis("ui_down","ui_up")
+	var ymove = Input.get_axis("ui_up","ui_down")
 	var xmove = Input.get_axis("ui_left","ui_right")
 	var direction = Vector2(xmove, ymove).normalized()
 	
