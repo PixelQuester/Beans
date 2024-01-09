@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 @export var speed : float = 600.0
 
+@export var weapon_strength : float = 500.0
+
 var is_attacking := false
 
 
@@ -21,6 +23,10 @@ func _physics_process(delta):
 	
 	if is_attacking:
 		$Weapon.show()
+		for body in $Weapon/Area2D.get_overlapping_bodies():
+			if body.has_method("knockback"):
+				print("WHAM")
+				body.knockback(global_position, weapon_strength)
 	else:
 		$Weapon.rotation = (get_global_mouse_position()-global_position).angle() + PI/4
 		$Weapon.hide()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsyyvfod7vmkv"]
+[gd_scene load_steps=6 format=3 uid="uid://cd254kseptusr"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_x070g"]
 [ext_resource type="Texture2D" uid="uid://b3reukep71v38" path="res://parrot.png" id="2_r2nqy"]
@@ -8,7 +8,7 @@
 radius = 64.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1if7h"]
-size = Vector2(16.0117, 10.7511)
+size = Vector2(15.9899, 7.85703)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_x070g")
@@ -28,7 +28,9 @@ texture = ExtResource("3_h67py")
 [node name="Area2D" type="Area2D" parent="Weapon"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Weapon/Area2D"]
-position = Vector2(88, -121)
+position = Vector2(88.0604, -109.772)
 rotation = 0.539902
 scale = Vector2(4.8053, 14.0111)
 shape = SubResource("RectangleShape2D_1if7h")
+
+[connection signal="body_entered" from="Weapon/Area2D" to="." method="_on_area_2d_body_entered"]

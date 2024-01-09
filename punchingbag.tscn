@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://hlttp6pinbtr"]
+[gd_scene load_steps=5 format=3 uid="uid://phwgfpisetjs"]
 
 [ext_resource type="Texture2D" uid="uid://bpgwm5ci33gcd" path="res://punchingbag.png" id="1_0xqhn"]
+[ext_resource type="Script" path="res://punchingbag.gd" id="1_yb316"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cxr20"]
 
@@ -16,6 +17,7 @@ animations = [{
 }]
 
 [node name="Punchingbag" type="RigidBody2D"]
+script = ExtResource("1_yb316")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(7.41234, 8.19035)
