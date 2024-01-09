@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cd254kseptusr"]
+[gd_scene load_steps=5 format=3 uid="uid://cd254kseptusr"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_x070g"]
 [ext_resource type="Texture2D" uid="uid://b3reukep71v38" path="res://parrot.png" id="2_r2nqy"]
+[ext_resource type="Texture2D" uid="uid://cto3d3bcklv5r" path="res://hammer_silver.png" id="3_h67py"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xa16f"]
 radius = 64.0
@@ -14,3 +15,9 @@ texture = ExtResource("2_r2nqy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_xa16f")
+
+[node name="Weapon" type="Node2D" parent="."]
+
+[node name="Hammer" type="Sprite2D" parent="Weapon"]
+position = Vector2(93, -108)
+texture = ExtResource("3_h67py")
