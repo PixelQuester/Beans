@@ -19,5 +19,6 @@ func _physics_process(delta):
 	
 	global_position += direction * delta * speed
 	
-	
-	
+func _input(event):
+	if event.is_action("ui_accept"):
+		print("Beans")
