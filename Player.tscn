@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cd254kseptusr"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_x070g"]
+[ext_resource type="Texture2D" uid="uid://b3reukep71v38" path="res://parrot.png" id="2_r2nqy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xa16f"]
+radius = 64.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_x070g")
+
+[node name="Parrot" type="Sprite2D" parent="."]
+texture = ExtResource("2_r2nqy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xa16f")
