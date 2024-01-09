@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cd254kseptusr"]
+[gd_scene load_steps=6 format=3 uid="uid://dsyyvfod7vmkv"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_x070g"]
 [ext_resource type="Texture2D" uid="uid://b3reukep71v38" path="res://parrot.png" id="2_r2nqy"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xa16f"]
 radius = 64.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1if7h"]
+size = Vector2(16.0117, 10.7511)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_x070g")
@@ -21,3 +24,11 @@ shape = SubResource("CircleShape2D_xa16f")
 [node name="Hammer" type="Sprite2D" parent="Weapon"]
 position = Vector2(93, -108)
 texture = ExtResource("3_h67py")
+
+[node name="Area2D" type="Area2D" parent="Weapon"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Weapon/Area2D"]
+position = Vector2(88, -121)
+rotation = 0.539902
+scale = Vector2(4.8053, 14.0111)
+shape = SubResource("RectangleShape2D_1if7h")
