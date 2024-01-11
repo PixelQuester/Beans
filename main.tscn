@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cd254kseptusr" path="res://Player.tscn" id="1_m73nc"]
 [ext_resource type="Texture2D" uid="uid://cto3d3bcklv5r" path="res://hammer_silver.png" id="2_yai2n"]
 [ext_resource type="PackedScene" uid="uid://phwgfpisetjs" path="res://punchingbag.tscn" id="3_foyu8"]
-[ext_resource type="PackedScene" uid="uid://hgyltv6m12lc" path="res://spikes.tscn" id="4_3q5lr"]
+[ext_resource type="PackedScene" path="res://spikes.tscn" id="4_3q5lr"]
 
 [node name="Main" type="Node2D"]
 

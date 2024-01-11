@@ -17,8 +17,8 @@ func _process(delta):
 	pass
 	
 func _physics_process(delta):
-	var ymove = Input.get_axis("ui_up","ui_down")
-	var xmove = Input.get_axis("ui_left","ui_right")
+	var ymove = Input.get_axis("player_up","player_down")
+	var xmove = Input.get_axis("player_left","player_right")
 	var direction = Vector2(xmove, ymove).normalized()
 	
 	if is_attacking:
@@ -34,7 +34,7 @@ func _physics_process(delta):
 	global_position += direction * delta * speed
 	
 func _input(event):
-	if event.is_action_pressed("ui_accept") and is_attacking == false:
+	if event.is_action_pressed("hammer") and is_attacking == false:
 		print("Beans")
 		is_attacking = true
 		await get_tree().create_timer(.5).timeout
