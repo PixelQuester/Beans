@@ -13,3 +13,6 @@ func _process(delta):
 func knockback(other_position, strength):
 	var direction : Vector2 = (global_position - other_position).normalized()
 	linear_velocity += direction * strength
+
+func die():
+	queue_free()
